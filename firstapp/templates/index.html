@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+<center>
+    <h1><b> This is my first page</b> </h1>
+    <p> click on the "choose File" button to upload a file</p>
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token %}
+        <input type ="file" id="myfile" name="document">
+        <input type="submit" value="upload">
+    </form>
+</center>
+{% endblock %}
+</body>
+</html>
